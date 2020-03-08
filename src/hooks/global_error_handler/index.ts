@@ -1,6 +1,7 @@
 import { Updates } from 'expo';
 import { t } from 'i18n-js';
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 import { showMessage } from 'react-native-flash-message';
 import { COLORS } from '../../constants/colors';
 
@@ -39,7 +40,8 @@ export const useGlobalErrorHandler = (): void => {
         }
       }
     };
-
-    ErrorUtils.setGlobalHandler(globalErrorHandler);
+    if (Platform.OS === 'android' || Platform.OS === 'ios') {
+      ErrorUtils.setGlobalHandler(globalErrorHandler);
+    }
   }, []);
 };

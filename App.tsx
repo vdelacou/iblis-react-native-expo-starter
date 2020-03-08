@@ -8,6 +8,7 @@ import { CONFIG } from './src/config';
 import { COLORS } from './src/constants/colors';
 import en from './src/i18n/en.json';
 import { AppSwitchNavigator } from './src/navigation/app_switch_navigator';
+import { useGlobalErrorHandler } from './src/hooks/global_error_handler';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +28,7 @@ enableScreens();
 
 const App: FC = () => {
   // global error catcher (we show message if any problem not catched before)
-  // useGlobalErrorHandler();
+  useGlobalErrorHandler();
 
   return (
     <View style={styles.container}>
