@@ -1,0 +1,43 @@
+{
+  "hooks": {
+    "useGlobalErrorHandler": {
+      "error": {
+        "message": "An unexpected error occurred.",
+        "description": "Please try again later."
+      }
+    }
+  },
+  "navigation": {
+    "main": {
+      "AccountTabStack": {
+        "Account": {
+          "title": "Account"
+        }
+      },
+      "HomeTabStack": {
+        "Home": {
+          "title": "Home"
+        },
+        "Details": {
+          "title": "Details"
+        }
+      }
+    }
+  },
+  "screens": {
+    "AccountScreen": {
+      "title": "My account"
+    },
+    "DetailsScreen": {
+      "title": "The Details"
+    },
+    "HomeScreen": {
+      "title": "Go to Details"
+    }
+  },
+  "wrapper": {
+    "OfflineWrapperView": {
+      "title": "You are offline. Check your connection."
+    }
+  }
+}
